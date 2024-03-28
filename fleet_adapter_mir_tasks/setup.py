@@ -1,6 +1,6 @@
-from setuptools import setup
+from setuptools import find_packages, setup
 
-package_name = 'fleet_adapter_mir'
+package_name = 'fleet_adapter_mir_tasks'
 
 setup(
     name=package_name,
@@ -13,14 +13,13 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='Grey, Aaron',
-    maintainer_email='grey@openrobotics.org, aaron@openrobotics.org',
-    description='RMF fleet adapter for MiR robots',
+    maintainer='Xiyu',
+    maintainer_email='xiyu@openrobotics.org',
+    description='RMF fleet adapter custom tasks for MiR robots',
     license='Apache License 2.0',
     entry_points={
         'console_scripts': [
-            'fleet_adapter_mir=fleet_adapter_mir.fleet_adapter_mir:main',
-            'rmf_cart_delivery=fleet_adapter_mir.rmf_cart_delivery:CartDelivery',
+            'dispatch_delivery = fleet_adapter_mir_tasks.dispatch_delivery:main'
         ],
     },
 )
